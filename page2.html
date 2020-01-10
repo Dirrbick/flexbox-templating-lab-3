@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/modules.css">
     <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <script id="lab03Handlebars" type="text/x-handlebars-template">
+      <section id="photo-template">
+        <div class="testclass">
+          <h2>{{tile}}</h2>
+          <img src="" alt="">
+          <p>{{description}}</p>
+        </div>
+      </section>
+    </script>
   </head>
   <body>
     <header>
@@ -27,20 +36,15 @@
       </nav>
     </header>
     <main>
-      <section id="photo-template">
-        <div class="testclass">
-          <h2></h2>
-          <img src="" alt="">
-          <p></p>
-        </div>
-      </section>
     </main>
     <footer>
       &copy; 2018 Code Fellows
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    
   </body>
 </html>
