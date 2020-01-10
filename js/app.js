@@ -10,18 +10,18 @@ function Horns(item) {
 
 Horns.allHorns = [];
 
-Horns.prototype.render = function() {
-  $('#photo-template').append('<div class="copy"></div>');
-  let $hornsCopy = $('div[class = "copy"]');
-  let $hornsHTML = $('.testclass').html();
+// Horns.prototype.render = function() {
+//   $('#photo-template').append('<div class="copy"></div>');
+//   let $hornsCopy = $('div[class = "copy"]');
+//   let $hornsHTML = $('.testclass').html();
 
-  $hornsCopy.html($hornsHTML);
-  $hornsCopy.find('h2').text(this.title);
-  $hornsCopy.find('img').attr('src', this.url);
-  $hornsCopy.find('p').text(this.desc);
-  $hornsCopy.removeClass('copy');
-  $hornsCopy.attr('class', this.keyword);
-};
+//   $hornsCopy.html($hornsHTML);
+//   $hornsCopy.find('h2').text(this.title);
+//   $hornsCopy.find('img').attr('src', this.url);
+//   $hornsCopy.find('p').text(this.desc);
+//   $hornsCopy.removeClass('copy');
+//   $hornsCopy.attr('class', this.keyword);
+// };
 
 Horns.readJson = () => {
   $.get('../data/page-1.json')
