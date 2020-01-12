@@ -14,7 +14,7 @@ Horns.prototype.toHtml = function () {
 };
 
 Horns.readJson = () => {
-  $.get('../data/page-1.json')
+  $.get('../data/page-2.json')
     .then(data => {
       data.forEach(item => {
         Horns.allHorns.push(new Horns(item));
@@ -52,14 +52,13 @@ Horns.filterHandler = () => {
   $('select').on('change', function() {
     let $selected = $(this).val();
     if ($selected !== 'default') {
-      console.log($selected);
+      $selected.hide();
       Horns.allHorns.forEach(image => {
         if ($selected === image.keyword) {
-          // $(`div[class="${$selected}"]`).addClass('filtered').fadeIn();
-          $('div').hide();
-          $(this.class).show();
-          console.log($selected);
+          $(`div[class="${$selected}"]`).addClass('filtered').fadeIn();
+          $(this.keyword).show();
         }
+        
       });
 
       $(`option[value=${$selected}]`).fadeIn();
