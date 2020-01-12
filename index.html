@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/modules.css">
     <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <script id="lab03Handlebars" type="text/x-handlebars-template">
+      <div class={{keyword}}>
+        <!-- found how to dynamically add images per handlebars -->
+        <h2>{{title}}</h2>
+        <img src="{{image_url}}">
+        <p>{{description}}</p>
+      </div>
+    </script>
   </head>
   <body>
     <header>
@@ -25,19 +33,30 @@
           </li>
         </ul>
       </nav>
+      <section id="filter-buttons">
+        <form>
+          <fieldset>
+            <div id= "name-button">
+              <input type="radio" id="choose-name" name="button" value= "filter-by-title">
+              <label for="choose-name">Filter By Name</label>
+            </div>
+            <div id="horns-button">
+              <input type="radio" id="choose-horns" name="button" value="filter-by-numhorns">
+              <label for="choose-horns">Filter By Number of Horns</label>
+            </div>
+          </fieldset>
+        </form>
+      </section>
     </header>
     <main>
       <section id="photo-template">
-        <div class="testclass">
-          <h2></h2>
-          <img src="" alt="">
-          <p></p>
-        </div>
+
       </section>
     </main>
     <footer>
       &copy; 2018 Code Fellows
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
