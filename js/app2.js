@@ -52,13 +52,14 @@ Horns.filterHandler = () => {
   $('select').on('change', function() {
     let $selected = $(this).val();
     if ($selected !== 'default') {
-      $selected.hide();
+      console.log($selected);
       Horns.allHorns.forEach(image => {
         if ($selected === image.keyword) {
-          $(`div[class="${$selected}"]`).addClass('filtered').fadeIn();
-          $(this.keyword).show();
+          // $(`div[class="${$selected}"]`).addClass('filtered').fadeIn();
+          $('div').hide();
+          $(this.class).show();
+          console.log($selected);
         }
-        
       });
 
       $(`option[value=${$selected}]`).fadeIn();
